@@ -56,7 +56,7 @@
                 if(button=="yes"){
                         alert("Bende seni seviyorum! Görüşürüz <3");
                 } else {
-                    if(document.getElementById("no").innerText=="EVETT"){
+                    if(document.getElementById("no").value=="EVETT"){
                         alert("Bende seni seviyorum! Görüşürüz <3");
                    }
                 }
@@ -75,7 +75,7 @@
                 var randomIndex = Math.floor(Math.random() * noTexts.length);
                 var randomText = noTexts[randomIndex];
                 no.innerText = randomText;
-                if(no.innerText=="EVETT"){
+                if(randomText=="EVETT"){
                     no.style.backgroundColor="#ef476f";
                 }
                     no.innerText
