@@ -49,18 +49,25 @@
             }
         </style>
         <script>
-            document.getElementById("yesButton").addEventListener("click", showAlert);
+            document.getElementById("yesButton").addEventListener("click", showAlert("yes"));
+            document.getElementById("no").addEventListener("click", showAlert("no"));
 
-            function showAlert() {
-                alert("I love you! See you soon <3");
+            function showAlert(button) {
+                if(button=="yes"){
+                        alert("Bende seni seviyorum! Görüşürüz <3");
+                } else {
+                    if(document.getElementById("no").innerText=="EVETT){
+                        alert("Bende seni seviyorum! Görüşürüz <3");
+                   }
+                }
             }
 
             var yesButton = document.getElementById("yesButton");
             var no = document.getElementById("no");
             var valentineImage = document.getElementById("valentineImage");
 
-            var noTexts = ["Emin Misin?", "Lütfen bana bir şans ver üzümlü kekim..", "Üzümlü kekim, lütfen..", "Bunu bana yapma :(", "Kalbimi kırıyorsun", "Ağlamaya gidiyorum", "Ayıp ediyorsun", "Ersanını sikim"];
-            var imageSources = ["https://pbs.twimg.com/media/Fyk7XMnaEAI3PsB.jpg", "https://media.tenor.com/BP70qe8X0J8AAAAe/crycat-crying-cat.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9e71v7IfFLLS_1CfY2it3an-6XH1uROjTfU5c88AwRL8aRkqAYDmoFrm9gpbUqwNameo&usqp=CAU", "https://i.pinimg.com/736x/cb/d8/3b/cbd83b534a315e809a9da2b8cd3ac3bf.jpg", "https://image.milimaj.com/i/milliyet/75/0x0/5c8d2fcd45d2a08af426c0ee.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtA_dPlCFpKezPVRKB82g6Y306cR3P2uh8t91GHPXENg&s"];
+            var noTexts = ["Emin Misin?", "Lütfen bana bir şans ver üzümlü kekim..", "Üzümlü kekim, lütfen..", "Bunu bana yapma :(", "Kalbimi kırıyorsun", "Ağlamaya gidiyorum", "Ayıp ediyorsun", "Bunu ne kadar daha yapacaksın?", "Kaderi zorlama işte? BENİMSİN!", "EVETT"];
+            var imageSources = ["https://pbs.twimg.com/media/Fyk7XMnaEAI3PsB.jpg", "https://media.tenor.com/BP70qe8X0J8AAAAe/crycat-crying-cat.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9e71v7IfFLLS_1CfY2it3an-6XH1uROjTfU5c88AwRL8aRkqAYDmoFrm9gpbUqwNameo&usqp=CAU", "https://i.pinimg.com/736x/cb/d8/3b/cbd83b534a315e809a9da2b8cd3ac3bf.jpg", "https://image.milimaj.com/i/milliyet/75/0x0/5c8d2fcd45d2a08af426c0ee.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfRFlMiRaJrp9UVGD7gqdY3ukuegIUyxQXZO4s5vOE-w&s"];
 
             no.addEventListener("click", change);
 
@@ -68,6 +75,10 @@
                 var randomIndex = Math.floor(Math.random() * noTexts.length);
                 var randomText = noTexts[randomIndex];
                 no.innerText = randomText;
+                if(no.innerText=="EVETT"){
+                    no.style.backgroundColor="#ef476f";
+                }
+                    no.innerText
 
                 var i = Math.floor(Math.random() * 1000) + 1;
                 var j = Math.floor(Math.random() * 700) + 1;
@@ -79,8 +90,8 @@
                 yesButton.style.width = currentWidth + 30 + "px";
                 yesButton.style.height = currentHeight + 10 + "px";
 
-                //var randomImageIndex = Math.floor(Math.random() * imageSources.length);
-                valentineImage.src = imageSources[randomIndex];
+                var randomImageIndex = Math.floor(Math.random() * imageSources.length);
+                valentineImage.src = imageSources[randomImageIndex];
             }
         </script>
     </body>
